@@ -16,7 +16,7 @@ do
 done
 
 if [[ -z "$client" ]]; then
-  if [[ "$PWD" =~ /sv/clients ]]; then
+  if [[ "$PWD" =~ "$clientsDir" ]]; then
     IFS="/" read -a dirs <<< $(pwd)
     trigger=false
     for i in "${dirs[@]}"; do
